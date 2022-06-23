@@ -1,0 +1,6 @@
+{
+    "ignore mypy typing": {
+        "prefix": "ti",
+        "body": "# type:ignore"
+    }
+}

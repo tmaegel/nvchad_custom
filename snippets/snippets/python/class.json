@@ -1,0 +1,127 @@
+{
+    "class simple": {
+        "prefix": "class",
+        "body": [
+            "class ${1:classname}:",
+            "\t${2:pass}"
+        ],
+        "description": "class definition"
+    },
+    "class extends object": {
+        "prefix": "classe",
+        "body": [
+            "class ${1:classname}(${2:object}):",
+            "\t${3:pass}"
+        ],
+        "description": "class definition"
+    },
+    "class with __init__": {
+        "prefix": "classi",
+        "body": [
+            "class ${1:ClassName}(${2:object}):",
+            "\t\"\"\"${3:docstring for $1.}\"\"\"",
+            "\tdef __init__(self, ${4:arg}):",
+            "\t\t${5:super($1, self).__init__()}",
+            "\t\tself.arg = arg",
+            "\t\t$0"
+        ],
+        "description": "class definition with __init__"
+    },
+    "new dataclass": {
+        "prefix": "classd",
+        "body": [
+            "@dataclass",
+            "class ${1:ClassName}:",
+            "\tname: str",
+            "\tunit_price: float",
+            "\tquantity_on_hand: int = 0",
+            "\t$0"
+        ],
+        "description": "dataclass definition"
+    },
+    "def __init__": {
+        "prefix": "defi",
+        "body": [
+            "def __init__(self, ${1:arg}):",
+            "\t${2:pass}$0"
+        ],
+        "description": "__init__ method"
+    },
+    "static method": {
+        "prefix": "defs",
+        "body": [
+            "@staticmethod",
+            "def ${1:mname}(${2:arg}):",
+            "\t${3:pass}$0"
+        ],
+        "description": "static method definition"
+    },
+    "class method": {
+        "prefix": "defc",
+        "body": [
+            "@classmethod",
+            "def ${1:mname}(cls, ${2:arg}):",
+            "\t${3:pass}$0"
+        ],
+        "description": "class method definition"
+    },
+    "method": {
+        "prefix": "defm",
+        "body": [
+            "def ${1:mname}(self, ${2:arg}):",
+            "\t${3:pass}$0"
+        ],
+        "description": "method definition"
+    },
+    "method with return": {
+        "prefix": "defmt",
+        "body": [
+            "def ${1:mname}(self, ${2:arg}) -> ${3:return_type}:",
+            "\t${4:pass}$0"
+        ],
+        "description": "method definition with return"
+    },
+    "function": {
+        "prefix": "deff",
+        "body": [
+            "def ${1:fname}(${2:arg}):",
+            "\t${3:pass}$0"
+        ],
+        "description": "function definition"
+    },
+    "function with return": {
+        "prefix": "defft",
+        "body": [
+            "def ${1:fname}(${2:arg}) -> ${3:return_type}:",
+            "\t${4:pass}$0"
+        ],
+        "description": "function definition with return"
+    },
+    "async function": {
+        "prefix": "adef",
+        "body": [
+            "async def ${1:fname}(${2:arg}):",
+            "\t${3:pass}$0"
+        ],
+        "description": "async function definition"
+    },
+    "property": {
+        "prefix": "property",
+        "body": [
+            "@property\ndef ${1:foo}(self):",
+            "\"\"\"${2:The $1 property.}\"\"\"",
+            "${3:return self._$1}",
+            "@${4:$1}.setter",
+            "def ${5:$1}(self, value):",
+            "\t${6:self._$1} = value"
+        ],
+        "description": "New property: get and set via decorator"
+    },
+    "if __name__ == \"__main__\"": {
+        "prefix": "ifmain",
+        "body": [
+            "if __name__ == \"__main__\":",
+            "\t${0:pass}"
+        ]
+    }
+}

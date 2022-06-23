@@ -1,0 +1,74 @@
+{
+    "for": {
+        "prefix": "for",
+        "body": [
+            "for ${1:value} in ${2:iterable}:",
+            "\t${3:pass}$0"
+        ],
+        "description": "for loop"
+    },
+    "for/enumerate": {
+        "prefix": "forenum",
+        "body": [
+            "for ${$1:index}, ${2:value} in enumerate(${2:iterable}):",
+            "\t${3:pass}$0"
+        ],
+        "description": "enumerate for loop"
+    },
+    "for/else": {
+        "prefix": "fore",
+        "body": [
+            "for ${1:value} in ${2:iterable}:",
+            "\t${3:pass}",
+            "else:",
+            "\t${4:pass}"
+        ],
+        "description": "for loop with else"
+    },
+    "async/for": {
+        "prefix": "afor",
+        "body": [
+            "async for ${1:value} in ${2:iterable}:",
+            "\t${3:pass}"
+        ],
+        "description": "async for statement"
+    },
+    "async/for/else": {
+        "prefix": "afore",
+        "body": [
+            "async for ${1:value} in ${2:iterable}:",
+            "\t${3:pass}",
+            "else:",
+            "\t${4:pass}"
+        ],
+        "description": "async for statement with else"
+    },
+    "while": {
+        "prefix": "wh",
+        "body": [
+            "while ${1:condition}:",
+            "\t${2:pass}$0"
+        ],
+        "description": "while loop"
+    },
+    "while/else": {
+        "prefix": "whe",
+        "body": [
+            "while ${1:condition}:",
+            "\t${2:pass}",
+            "else:",
+            "\t${3:pass}"
+        ],
+        "description": "while loop with else"
+    },
+    "do while": {
+        "prefix": "dowh",
+        "body": [
+            "while True:",
+            "\t${1:pass}",
+            "\tif ${0:condition}:",
+            "\t\tbreak"
+        ],
+        "description": "do-while loop"
+    }
+}

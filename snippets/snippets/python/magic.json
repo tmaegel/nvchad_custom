@@ -1,0 +1,164 @@
+{
+    "__magic__": {
+        "prefix": "__",
+        "body": [
+            "def __${1:init}__(self):",
+            "\t${0:pass}"
+        ],
+        "description": "create magic methods"
+    },
+    "__get__": {
+        "prefix": "__get",
+        "body": [
+            "def __get__(self, instance, owner):",
+            "\t${0:pass}"
+        ]
+    },
+    "__set__": {
+        "prefix": "__set",
+        "body": [
+            "def __set__(self, instance, value):",
+            "\t${0:pass}"
+        ]
+    },
+    "__delete__": {
+        "prefix": "__delete",
+        "body": [
+            "def __delete__(self, instance):",
+            "\t${0:pass}"
+        ]
+    },
+    "__len__": {
+        "prefix": "__len",
+        "body": [
+            "def __len__(self):",
+            "\t${0:pass}"
+        ]
+    },
+    "__getitem__": {
+        "prefix": "__getitem",
+        "body": [
+            "def __getitem__(self, key):",
+            "\t${0:pass}"
+        ]
+    },
+    "__setitem__": {
+        "prefix": "__setitem",
+        "body": [
+            "def __setitem__(self, key, value):",
+            "\t${0:pass}"
+        ]
+    },
+    "__delitem__": {
+        "prefix": "__delitem",
+        "body": [
+            "def __delitem__(self, key):",
+            "\t${0:pass}"
+        ]
+    },
+    "__iter__": {
+        "prefix": "__iter",
+        "body": [
+            "def __iter__(self):",
+            "\t${0:pass}"
+        ]
+    },
+    "__reversed__": {
+        "prefix": "__reverse",
+        "body": [
+            "def __reversed__(self):",
+            "\t${0:pass}"
+        ]
+    },
+    "__contains__": {
+        "prefix": "__contains",
+        "body": [
+            "def __contains__(self, item):",
+            "\t${0:pass}"
+        ]
+    },
+    "__setattr__": {
+        "prefix": "__setattr",
+        "body": [
+            "def __setitem__(self, key, name):",
+            "\t${0:pass}"
+        ]
+    },
+    "__eq__": {
+        "prefix": "__eq",
+        "body": [
+            "def __eq__(self, other):",
+            "\t${0:pass}"
+        ]
+    },
+    "__ne__": {
+        "prefix": "__ne",
+        "body": [
+            "def __ne__(self, other):",
+            "\t${0:pass}"
+        ]
+    },
+    "__lt__": {
+        "prefix": "__lt",
+        "body": [
+            "def __lt__(self, other):",
+            "\t${0:pass}"
+        ]
+    },
+    "__le__": {
+        "prefix": "__le",
+        "body": [
+            "def __le__(self, other):",
+            "\t${0:pass}"
+        ]
+    },
+    "__gt__": {
+        "prefix": "__gt",
+        "body": [
+            "def __gt__(self, other):",
+            "\t${0:pass}"
+        ]
+    },
+    "__ge__": {
+        "prefix": "__ge",
+        "body": [
+            "def __ge__(self, other):",
+            "\t${0:pass}"
+        ]
+    },
+    "__str__": {
+        "prefix": "__str",
+        "body": [
+            "def __str__(self):",
+            "\t${0:pass}"
+        ]
+    },
+    "__repr__": {
+        "prefix": "__repr",
+        "body": [
+            "def __repr__(self):",
+            "\t${0:pass}"
+        ]
+    },
+    "__unicode__": {
+        "prefix": "__unicode",
+        "body": [
+            "def __unicode__(self):",
+            "\t${0:pass}"
+        ]
+    },
+    "__enter__": {
+        "prefix": "__enter",
+        "body": [
+            "def __enter__(self):",
+            "\t${0:pass}"
+        ]
+    },
+    "__exit__": {
+        "prefix": "__exit",
+        "body": [
+            "def __exit__(self, exc_type, exc_value, traceback):",
+            "\t${0:pass}"
+        ]
+    }
+}

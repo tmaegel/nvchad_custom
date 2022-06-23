@@ -1,0 +1,40 @@
+{
+    "from future import ...": {
+        "prefix": "impfut",
+        "body": [
+            "# coding: utf-8",
+            "from __future__ import(",
+            "\tabsolute_import,",
+            "\tdivision,",
+            "\tprint_function,",
+            "\tunicode_literals",
+            ")"
+        ],
+        "description": "Import future statement definitions for python3.x scripts using utf-8 as encoding"
+    },
+    "import": {
+        "prefix": "imp",
+        "body": "import ${1:package/module}$0",
+        "description": "Import a package or module"
+    },
+    "from ... import ...": {
+        "prefix": "from",
+        "body": "from ${1:package/module} import ${2:names}$0",
+        "description": "Import statement that allows individual objects from the module to be imported directly into the caller's symbol table"
+    },
+    "from unittest.mock import patch": {
+        "prefix": "impunitpatch",
+        "body": "from unittest.mock import patch",
+        "description": "Import patch module from unittest package"
+    },
+    "import dataclass": {
+        "prefix": "impdc",
+        "body": "from dataclasses import dataclass",
+        "description": "Import dataclass module"
+    },
+    "import argparse": {
+        "prefix": "impap",
+        "body": "import argparse",
+        "description": "Import argparse module"
+    }
+}

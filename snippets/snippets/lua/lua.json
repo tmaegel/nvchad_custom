@@ -1,0 +1,134 @@
+{
+    "require": {
+        "prefix": "req",
+        "body": [
+            "require(\"${1:module}\")"
+        ]
+    },
+    "return": {
+        "prefix": "ret",
+        "body": [
+            "return ${0}"
+        ]
+    },
+    "local expr": {
+        "prefix": "ll",
+        "body": [
+            "local ${1:var} = ${0:value}"
+        ]
+    },
+        "local single": {
+        "prefix": "l",
+        "body": [
+            "local ${0:var}"
+        ]
+    },
+    "local require": {
+        "prefix": "lreq",
+        "body": [
+            "local ${1:var} = require(\"${2:module}\")"
+        ]
+    },
+    "#!": {
+        "prefix": "env",
+        "body": [
+            "#!/usr/bin/env lua"
+        ]
+    },
+    "function": {
+        "prefix": "fun",
+        "body": [
+            "function ${1:fname}(${2:...})",
+            "\t${0}",
+            "end"
+        ]
+    },
+    "local function": {
+        "prefix": "lfun",
+        "body": [
+            "local ${1:fname} = function(${2:...})",
+            "\t${0}",
+            "end"
+        ]
+    },
+    "for": {
+        "prefix": "for",
+        "body": [
+            "for ${1:i}=${2:1},${3:10} do",
+            "\t${0:print(i)}",
+            "end"
+        ]
+    },
+    "for in pairs": {
+        "prefix": "forp",
+        "body": [
+            "for ${1:i},${2:v} in pairs(${3:table_name}) do",
+            "\t${0}",
+            "end"
+        ]
+    },
+    "for in ipairs": {
+        "prefix": "forip",
+        "body": [
+            "for ${1:i},${2:v} in ipairs(${3:table_name}) do",
+            "\t${0}",
+            "end"
+        ]
+    },
+    "if": {
+        "prefix": "if",
+        "body": [
+            "if ${1:condition} then",
+            "\t${2}",
+            "end"
+        ]
+    },
+    "if/else": {
+        "prefix": "ifel",
+        "body": [
+            "if ${1:condition} then",
+            "\t${2}",
+            "else",
+            "\t${0}",
+            "end"
+        ]
+    },
+    "if/elseif": {
+        "prefix": "ifei",
+        "body": [
+            "if ${1:condition} then",
+            "\t${2}",
+            "elseif ${1:condition} then",
+            "\t${0}",
+            "end"
+        ]
+    },
+    "if/elseif/else": {
+        "prefix": "ifeie",
+        "body": [
+            "if ${1:condition} then",
+            "\t${2}",
+            "elseif ${1:condition} then",
+            "\t${0}",
+            "else",
+            "\t${0}",
+            "end"
+        ]
+    },
+    "repeat": {
+        "prefix": "repeat",
+        "body": [
+            "repeat",
+            "\t${1}",
+            "until ${0:condition}"
+        ]
+    },
+    "while": {
+        "prefix": "wh",
+        "body": [
+            "while ${1:condition} do",
+            "\t${1}",
+            "end"
+        ]
+    }
+}

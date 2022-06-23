@@ -1,0 +1,207 @@
+{
+    "#!/usr/bin/env sh": {
+        "prefix": "envsh",
+        "body": [
+            "#!/usr/bin/env sh"
+        ]
+    },
+    "#!/usr/bin/env bash": {
+        "prefix": "envbash",
+        "body": [
+            "#!/usr/bin/env bash"
+        ]
+    },
+    "set -ueo pipefail": {
+        "prefix": "safe",
+        "body": [
+            "# -u: Treat unset variables as an error when substituting.",
+            "# -e: Exit immediately if a command exits with a non-zero status.",
+            "# -o pipefail: the return value of a pipeline is the status of",
+            "#              the last command to exit with a non-zero status.",
+            "set -ueo pipefail"
+        ]
+    },
+    "cleanup()": {
+        "prefix": "clean",
+        "body": [
+            "function cleanup() {",
+            "\tEXIT_CODE=$?",
+            "\tset +e # disable termination on error",
+            "\t# do cleanup stuff here",
+            "\tif [ \"$$EXIT_CODE\" -gt 0 ]; then",
+            "\t\techo \"ERR: exit ($$EXIT_CODE)\"",
+            "\tfi",
+            "\texit $$EXIT_CODE",
+            "}",
+            "trap cleanup EXIT"
+        ]
+    },
+    "if": {
+        "prefix": "if",
+        "body": [
+            "if [ ${0:condition} ]; then",
+            "\techo \"true\"",
+            "fi"
+        ]
+    },
+    "if/else": {
+        "prefix": "ife",
+        "body": [
+            "if [ ${0:condition} ]; then",
+            "\techo \"true\"",
+            "else",
+            "\techo \"false\"",
+            "fi"
+        ]
+    },
+    "if/elif": {
+        "prefix": "ifei",
+        "body": [
+            "if [ ${1:condition} ]; then",
+            "\techo \"true 1\"",
+            "elif [ ${0:condition} ]; then",
+            "\techo \"true 2\"",
+            "fi"
+        ]
+    },
+    "if/elif/else": {
+        "prefix": "ifeie",
+        "body": [
+            "if [ ${1:condition} ]; then",
+            "\techo \"true 1\"",
+            "elif [ ${0:condition} ]; then",
+            "\techo \"true 2\"",
+            "else",
+            "\techo \"false\"",
+            "fi"
+        ]
+    },
+    "for": {
+        "prefix": "for",
+        "body": [
+            "for (( ${2:i} = 0; $2 < ${1:count}; $2++ )); do",
+            "\techo \"$$i\"",
+            "done"
+        ]
+    },
+    "for in": {
+        "prefix": "fori",
+        "body": [
+            "for ${1:i} in ${2:haystack} ; do",
+            "\techo \"$$i\"",
+            "done"
+        ]
+    },
+    "for array": {
+        "prefix": "fora",
+        "body": [
+            "arr=(\"1\" \"2\" \"3\")",
+            "for i in \"${arr[@]}\"; do",
+            "\techo \"$$i\"",
+            "done"
+        ]
+    },
+    "while": {
+        "prefix": "wh",
+        "body": [
+            "while [ ${1:condition} ]; do",
+            "\t${0}",
+            "done"
+        ]
+    },
+    "until": {
+        "prefix": "until",
+        "body": [
+            "until [ ${1:condition} ]; do",
+            "\t${0}",
+            "done"
+        ]
+    },
+    "case": {
+        "prefix": "case",
+        "body": [
+            "case ${1:word} in",
+            "\t${2:pattern})",
+            "\t\t${0}",
+            "\t\t;;",
+            "esac"
+        ]
+    },
+    "getopts": {
+        "prefix": "getops",
+        "body": [
+            "function show_usage() {",
+            "\techo \"Usage:",
+            "\t\t$(basename \"$$0\") [options]\"",
+            "\techo \"\"",
+            "\techo \"Options:",
+            "\t\t-v      Parameter without argument",
+            "\t\t-i [id] Parameter with argument",
+            "\t\t-h      Display this message\"",
+            "}",
+            "",
+            "if [ $# -eq 0 ]; then",
+            "\tshow_usage",
+            "\t exit 1",
+            "fi",
+            "",
+            "while getopts \":hvi:\" arg; do",
+            "\tcase $$arg in",
+            "\t\tv)",
+            "\t\t\t# show version",
+            "\t\t\t;;",
+            "\t\ti)",
+            "\t\t\tsignal_id=$$OPTARG",
+            "\t\t\techo \"$$signal_id\"",
+            "\t\t\t;;",
+            "\t\th | *)",
+            "\t\t\tshow_usage",
+            "\t\t\texit 0",
+            "\t\t\t;;",
+            "\t\tesac",
+            "done"
+        ]
+    },
+    "check root": {
+        "prefix": "root",
+        "body": [
+            "if [ $(id -u) -ne 0 ]; then",
+            "\texec sudo $0;",
+            "fi"
+        ]
+    },
+    "function sh": {
+        "prefix": "funsh",
+        "body": [
+            "${1:function_name}() {",
+            "\t${0:#function_body}",
+            "}"
+        ]
+    },
+    "function": {
+        "prefix": "fun",
+        "body": [
+            "function ${1:function_name}() {",
+            "\t${0:#function_body}",
+            "}"
+        ]
+    },
+    "echo": {
+        "prefix": "echo",
+        "body": [
+            "echo \"${0:message}\""
+        ]
+    },
+    "read": {
+        "prefix": "read",
+        "body": [
+            "read -r ${0:VAR}"
+        ]
+    },
+    "expr": {
+        "prefix": "expr",
+        "body": [
+            "(( ${0:1 + 1} ))"
+        ]
+    }
+}

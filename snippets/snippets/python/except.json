@@ -1,0 +1,50 @@
+{
+    "try/except": {
+        "prefix": "try",
+        "body": [
+            "try:",
+            "\t${1:pass}",
+            "except ${2:Exception} as ${3:exc}:",
+            "\t${4:raise $3}$0"
+        ],
+        "description": "try/except block"
+    },
+    "try/except/else": {
+        "prefix": "trye",
+        "body": [
+            "try:",
+            "\t${1:pass}",
+            "except ${2:Exception} as ${3:exc}:",
+            "\t${4:raise $3}",
+            "else:",
+            "\t${5:pass}$0"
+        ],
+        "description": "try/except block with else statement"
+    },
+    "try/except/finally": {
+        "prefix": "tryf",
+        "body": [
+            "try:",
+            "\t${1:pass}",
+            "except ${2:Exception} as ${3:exc}:",
+            "\t${4:raise $3}",
+            "finally:",
+            "\t${5:pass}$0"
+        ],
+        "description": "try/except/finally block"
+    },
+    "try/except/else/finally": {
+        "prefix": "tryef",
+        "body": [
+            "try:",
+            "\t${1:pass}",
+            "except${2: ${3:Exception} as ${4:exc}}:",
+            "\t${5:raise}",
+            "else:",
+            "\t${6:pass}",
+            "finally:",
+            "\t${7:pass}$0"
+        ],
+        "description": "try/except/finally bock with else statement"
+    }
+}

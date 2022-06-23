@@ -1,0 +1,79 @@
+{
+    "name": "custom-snippets",
+    "engines": {
+        "vscode": "^1.11.0"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": [
+                    "shellscript",
+                    "shell",
+                    "sh",
+                    "zsh"
+                ],
+                "path": "./snippets/shell/shell.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python/class.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python/comprehension.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python/conditions.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python/debug.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python/doc.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python/env.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python/except.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python/import.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python/logging.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python/loops.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python/magic.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python/misc.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python/testing.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python/typing.json"
+            },
+            {
+                "language": "lua",
+                "path": "./snippets/lua/lua.json"
+            }
+        ]
+    }
+}

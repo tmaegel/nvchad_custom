@@ -1,0 +1,52 @@
+{
+    "get logger": {
+        "prefix": "logm",
+        "body": [
+            "import logging",
+            "logger = logging.getLogger(${0:__name__})"
+        ]
+    },
+    "log to syslog": {
+        "prefix": "log2sys",
+        "body": [
+            "import logging",
+            "logger = logging.getLogger(${0:__name__})",
+            "logger.setLevel(logging.INFO)",
+            "handler = logging.handlers.SysLogHandler(address=\"/dev/log\")",
+            "logger.addHandler(handler)",
+            "handler.setFormatter(logging.Formatter(\"%(name)10s - %(levelname)8s - %(message)s\"))"
+        ]
+    },
+    "log to stdout": {
+        "prefix": "log2stdout",
+        "body": [
+            "import logging",
+            "import sys",
+            "logger = logging.getLogger(${0:__name__})",
+            "logger.setLevel(logging.INFO)",
+            "handler = logging.StreamHandler(sys.stdout)",
+            "handler.setFormatter(logging.Formatter(\"%(name)10s - %(levelname)8s - %(message)s\"))",
+            "logger.addHandler(handler)"
+        ]
+    },
+    "log debug": {
+        "prefix": "logd",
+        "body": "logger.debug(${0:msg})"
+    },
+    "log info": {
+        "prefix": "logi",
+        "body": "logger.info(${0:msg})"
+    },
+    "log warning": {
+        "prefix": "logw",
+        "body": "logger.warning(${0:msg})"
+    },
+    "log error": {
+        "prefix": "loge",
+        "body": "logger.error(${0:msg})"
+    },
+    "log critical": {
+        "prefix": "logc",
+        "body": "logger.critical(${0:msg})"
+    }
+}

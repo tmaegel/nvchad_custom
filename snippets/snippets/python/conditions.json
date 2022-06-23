@@ -1,0 +1,58 @@
+{
+    "if": {
+        "prefix": "if",
+        "body": [
+            "if ${1:condition}:",
+            "\t${2:pass}$0"
+        ],
+        "description": "if statement"
+    },
+    "if/else": {
+        "prefix": "ife",
+        "body": [
+            "if ${1:condition}:",
+            "\t${2:pass}",
+            "else:",
+            "\t${3:pass}"
+        ],
+        "description": "if statement with else"
+    },
+    "if/elif": {
+        "prefix": "ifei",
+        "body": [
+            "if ${1:condition}:",
+            "\t${2:pass}",
+            "elif ${1:expression}:",
+            "\t${2:pass}"
+        ],
+        "description": "if/elif statement"
+    },
+    "if/elif/else": {
+        "prefix": "ifeie",
+        "body": [
+            "if ${1:condition}:",
+            "\t${2:pass}",
+            "elif ${1:expression}:",
+            "\t${2:pass}",
+            "else:",
+            "\t${3:pass}"
+        ],
+        "description": "if/elif statement with else"
+    },
+    "elif": {
+        "prefix": "elif",
+        "body": [
+            "elif ${1:expression}:",
+            "\t${2:pass}"
+        ],
+        "description": "elif statement"
+    },
+    "else": {
+        "prefix": "else",
+        "body": [
+            "else:",
+            "\t${1:pass}"
+        ],
+        "description": "else statement"
+    }
+}

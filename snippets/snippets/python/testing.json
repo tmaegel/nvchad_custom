@@ -1,0 +1,95 @@
+{
+    "assert equal": {
+        "prefix": "ase",
+        "body": "self.assertEqual(${1:expected}, ${2:actual}${3:, '${4:message}'})$0"
+    },
+    "assert not equal": {
+        "prefix": "asne",
+        "body": "self.assertNotEqual(${1:expected}, ${2:actual}${3:, '${4:message}'})$0"
+    },
+    "assert raises": {
+        "prefix": "asr",
+        "body": "self.assertRaises(${1:exception}, ${2:callable}, ${3:args})$0"
+    },
+    "assert True": {
+        "prefix": "ast",
+        "body": "self.assertTrue(${1:actual}${2:, '${3:message}'})$0"
+    },
+    "assert False": {
+        "prefix": "asf",
+        "body": "self.assertFalse(${1:actual}${2:, '${3:message}'})$0"
+    },
+    "assert is": {
+        "prefix": "asi",
+        "body": "self.assertIs(${1:expected}, ${2:actual}${3:, '${4:message}'})$0"
+    },
+    "assert is not": {
+        "prefix": "asint",
+        "body": "self.assertIsNot(${1:expected}, ${2:actual}${3:, '${4:message}'})$0"
+    },
+    "assert is None": {
+        "prefix": "asino",
+        "body": "self.assertIsNone(${1:actual}${2:, '${3:message}'})$0"
+    },
+    "assert is not None": {
+        "prefix": "asinno",
+        "body": "self.assertIsNotNone(${1:actual}${2:, '${3:message}'})$0"
+    },
+    "assert in": {
+        "prefix": "asin",
+        "body": "self.assertIn(${1:needle}, ${2:haystack}${3:, '${4:message}'})$0"
+    },
+    "assert not in": {
+        "prefix": "asni",
+        "body": "self.assertNotIn(${1:needle}, ${2:haystack}${3:, '${4:message}'})$0"
+    },
+    "assert": {
+        "prefix": "as",
+        "body": "self.assert_(${1:boolean expression}${2:, '${3:message}'})$0"
+    },
+    "fail a test": {
+        "prefix": "fail",
+        "body": "self.fail('${1:message}')$0"
+    },
+    "test function": {
+        "prefix": "deft",
+        "body": [
+            "def test_${1:description}():",
+            "\t${0:pass}"
+        ]
+    },
+    "test class": {
+        "prefix": "classt",
+        "body": [
+            "class ${1:ExampleCase}(unittest.TestCase):",
+            "\tdef test_${2:description}(self):",
+            "\t\t${0:pass}"
+        ]
+    },
+    "unitest patch with": {
+        "prefix": "unittestpatchw",
+        "body": [
+            "with patch(\"{$2:module.Class.function}\", return_value=True) as mocked:",
+            "\tmocked.assert_called_once()",
+            "\t# assert mocked.call_count == 2"
+        ]
+    },
+    "unitest patch decorator": {
+        "prefix": "unittestpatchd",
+        "body": [
+            "@patch(\"{$2:module.Class.function}\", return_value=True)",
+            "def test_${$1:something}(mocked):",
+            "\tmocked.assert_called_once()",
+            "\t# assert mocked.call_count == 2"
+        ]
+    },
+    "assert SystemExit": {
+        "prefix": "esexit",
+        "body": [
+            "with pytest.raises(SystemExit) as wrapped_exit:",
+            "\t${0:fname}()",
+            "\tassert wrapped_exit.type == SystemExit",
+            "\tassert wrapped_exit.value.code == 0"
+        ]
+    }
+}

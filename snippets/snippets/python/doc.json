@@ -1,0 +1,38 @@
+{
+    "module docstring": {
+        "prefix": "docsm",
+        "body": [
+            "\"\"\"",
+            "File: ${1:`vim_snippets#Filename('$1.py', 'foo.py')`}",
+            "Author: `g:snips_author`",
+            "Email: `g:snips_email`",
+            "Github: `g:snips_github`",
+            "Description: ${0}",
+            "\"\"\""
+        ]
+    },
+    "function docstring (pydoc)": {
+        "prefix": "docsf",
+        "body": [
+            "\"\"\"",
+            "${1:Description}",
+            "",
+            "@param ${2:param}: ${3: Description}",
+            "@type  $2: ${4: Type}",
+            "",
+            "@return: ${5: Description}",
+            "@rtype : ${6: Type}",
+            "",
+            "@raise e: ${0: Description}",
+            "\"\"\""
+        ]
+    },
+    "docstring": {
+        "prefix": "docs",
+        "body": [
+            "\"\"\"",
+            "${0:doc}",
+            "\"\"\""
+        ]
+    }
+}
