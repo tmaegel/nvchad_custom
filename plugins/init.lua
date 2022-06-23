@@ -35,4 +35,10 @@ return {
       end,
    },
    ["tpope/vim-fugitive"] = {},
+   ["SmiteshP/nvim-gps"] = {
+      after = "nvim-treesitter",
+      config = function()
+         require "custom.plugins.gps"
+      end,
+   },
 }

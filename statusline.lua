@@ -77,10 +77,10 @@ M.git = function()
    return "%#St_gitIcons#" .. branch_name .. added .. changed .. removed
 end
 
--- M.gps = function()
---    local gps_present, gps = pcall(require, "nvim-gps")
---    return gps_present and gps.is_available() and gps.get_location() or ""
--- end
+M.gps = function()
+   local gps_present, gps = pcall(require, "nvim-gps")
+   return gps_present and gps.is_available() and gps.get_location() or ""
+end
 
 -- LSP STUFF
 M.LSP_progress = function()
@@ -149,7 +149,7 @@ M.run = function()
       M.git(),
 
       "%=",
-      -- M.gps(),
+      M.gps(),
       M.LSP_progress(),
       "%=",
 
