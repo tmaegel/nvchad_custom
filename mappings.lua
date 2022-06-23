@@ -92,8 +92,16 @@ M.general = {
 
 M.telescope = {
    n = {
+      ["<leader>F"] = {
+         function()
+            vim.cmd("Telescope find_files default_text=" .. vim.fn.expand "<cword>")
+         end,
+         "   find file under cursor",
+      },
       ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "   live grep" },
+      ["?"] = { "<cmd> Telescope grep_string <CR>", "   grep string under the cursor" },
       ["<leader>fk"] = { "<cmd> Telescope keymaps <CR>", "   show keys" },
+      ["<leader>fs"] = { "<cmd> Telescope search_history <CR>", "   lists searches that were executed recently" },
       ["<leader>gs"] = { "<cmd> Telescope git_status <CR>", "  git status" },
       ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "   git commits" },
       ["<leader>gb"] = { "<cmd> Telescope git_branches <CR>", "   git branches" },
