@@ -103,6 +103,7 @@ M.telescope = {
       ["?"] = { "<cmd> Telescope grep_string <CR>", "   grep string under the cursor" },
       ["<leader>fk"] = { "<cmd> Telescope keymaps <CR>", "   show keys" },
       ["<leader>fs"] = { "<cmd> Telescope search_history <CR>", "   lists searches that were executed recently" },
+      ["<leader>fc"] = { "<cmd> Telescope command_history <CR>", "   lists commands that were executed recently" },
       ["<leader>gs"] = { "<cmd> Telescope git_status <CR>", "  git status" },
       ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "   git commits" },
       ["<leader>gb"] = { "<cmd> Telescope git_branches <CR>", "   git branches" },
