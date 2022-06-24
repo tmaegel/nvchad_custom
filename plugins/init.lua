@@ -1,6 +1,10 @@
 -- lua/custom/plugins/init
 
 return {
+   ["nvim-telescope/telescope.nvim"] = {
+      -- Disable lazy-loading for telescope
+      module = "telescope",
+   },
    ["jose-elias-alvarez/null-ls.nvim"] = {
       after = "nvim-lspconfig",
       config = function()
