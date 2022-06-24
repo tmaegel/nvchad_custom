@@ -80,8 +80,9 @@ M.general = {
       },
       -- tabs
       ["<leader>tn"] = { "<cmd> tabnew <CR>", "烙 new tab" },
-      ["<leader>td"] = { "<cmd> tabclose <CR>", "  close tab" },
-      ["<leader>tq"] = { "<cmd> windo bd <CR>", "  close tab and its buffers" },
+      ["<leader>tq"] = { "<cmd> tabclose <CR>", "  close tab" },
+      ["<leader>td"] = { "<cmd> windo bd <CR>", "  close tab and its buffers" },
+      ["<leader>tc"] = { "<cmd> windo bd <CR>", "  close tab and its buffers (alt. mapping)" },
       ["<leader>tm"] = { "<cmd> +tabmove <CR>", "  move tab to the right" },
       ["<leader>tM"] = { "<cmd> -tabmove <CR>", "  move tab to the left" },
    },
