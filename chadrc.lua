@@ -94,6 +94,35 @@ M.ui = {
          fg = "green",
          bg = "black",
       },
+      -- statusline
+      St_FilePath_text = {
+         fg = "light_grey",
+         bg = "black",
+      },
+      St_Git_icon = {
+         fg = "black",
+         bg = "green",
+      },
+      St_Git_text = {
+         fg = "white",
+         bg = "lightbg",
+      },
+      St_FileType_icon = {
+         fg = "black",
+         bg = "purple",
+      },
+      St_FileType_text = {
+         fg = "white",
+         bg = "lightbg",
+      },
+      St_LspStatus_icon = {
+         fg = "black",
+         bg = "teal",
+      },
+      St_Sep = {
+         fg = "black",
+         bg = "black",
+      },
    },
    hl_override = {
       CursorLine = {
@@ -161,6 +190,38 @@ M.ui = {
       St_ReplaceMode = {
          fg = "black",
          bg = "orange",
+      },
+      -- statusline
+      StatusLine = {
+         bg = "black",
+      },
+      St_cwd_icon = {
+         fg = "black",
+         bg = "red",
+      },
+      St_cwd_text = {
+         fg = "white",
+         bg = "lightbg",
+      },
+      St_lspError = {
+         fg = "white",
+         bg = "lightbg",
+      },
+      St_lspWarning = {
+         fg = "white",
+         bg = "lightbg",
+      },
+      St_LspHints = {
+         fg = "white",
+         bg = "lightbg",
+      },
+      St_LspInfo = {
+         fg = "white",
+         bg = "lightbg",
+      },
+      St_LspStatus = {
+         fg = "white",
+         bg = "lightbg",
       },
       -- Blankline
       IndentBlanklineContextChar = {
