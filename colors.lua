@@ -3,6 +3,7 @@
 M = {}
 
 M.blue = "#61afef"
+M.green = "#98c379"
 M.nord_blue = "#81A1C1"
 
 M.sway_active = "#4b6789"

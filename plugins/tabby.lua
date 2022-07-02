@@ -87,7 +87,7 @@ local tabline = {
    },
    tail = {
       { "█", hl = { fg = hl_tabline_sel.bg, bg = hl_tabline_sel.bg } },
-      { "  ", hl = { fg = hl_tabline_fill.fg, bg = colors.blue } },
+      { "  ", hl = { fg = hl_tabline_fill.fg, bg = colors.green } },
    },
 }
 
