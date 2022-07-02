@@ -85,6 +85,9 @@ M.general = {
       ["<leader>tc"] = { "<cmd> windo bd <CR>", "  close tab and its buffers (alt. mapping)" },
       ["<leader>tm"] = { "<cmd> +tabmove <CR>", "  move tab to the right" },
       ["<leader>tM"] = { "<cmd> -tabmove <CR>", "  move tab to the left" },
+      -- Diff and merge
+      ["<leader>gl"] = { "<cmd> diffget LOCAL <CR>", "Apply local changes" },
+      ["<leader>gr"] = { "<cmd> diffget REMOTE <CR>", "Apply remote changes" },
    },
    x = {
       ["<leader>e"] = { "%", "Go to matching pair" },
@@ -99,7 +102,21 @@ M.telescope = {
          end,
          "   find file under cursor",
       },
+      ["<leader>fF"] = {
+         function()
+            local buffer_dir = require("telescope.utils").buffer_dir()
+            vim.cmd("Telescope find_files prompt_title=find_files_in_buffer_dir cwd=" .. buffer_dir)
+         end,
+         "   find file in directory of current buffer",
+      },
       ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "   live grep" },
+      ["<leader>fG"] = {
+         function()
+            local buffer_dir = require("telescope.utils").buffer_dir()
+            vim.cmd("Telescope live_grep prompt_title=live_grep_in_buffer_dir cwd=" .. buffer_dir)
+         end,
+         "   find file in directory of current buffer",
+      },
       ["?"] = { "<cmd> Telescope grep_string <CR>", "   grep string under the cursor" },
       ["<leader>fk"] = { "<cmd> Telescope keymaps <CR>", "   show keys" },
       ["<leader>fs"] = { "<cmd> Telescope search_history <CR>", "   lists searches that were executed recently" },
