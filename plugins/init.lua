@@ -21,11 +21,6 @@ return {
    ["L3MON4D3/LuaSnip"] = {
       -- Disable friendly-snippets dependency
       wants = "nvim-lspconfig",
-      config = function()
-         require("plugins.configs.others").luasnip()
-         -- Load custom snippets
-         require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/custom/snippets" } }
-      end,
    },
    ["folke/trouble.nvim"] = {
       config = function()
