@@ -30,6 +30,12 @@ M.ui = {
       config = "%!v:lua.require'custom.statusline'.run()",
    },
 
+   tabufline = {
+      enabled = false,
+      lazyload = true,
+      override = {},
+   },
+
    theme = "onedark", -- default theme
    transparency = false,
    hl_add = {
