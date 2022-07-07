@@ -3,9 +3,6 @@
 local plugin_override = require "custom.plugins.override"
 local colors = require "custom.colors"
 
--- Global variable for custom configs to allow for custom luasnip snippets.
-vim.g.luasnippets_path = "./lua/custom/snippets"
-
 local M = {}
 
 -- Overwrite options

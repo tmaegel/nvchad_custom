@@ -88,6 +88,8 @@ M.general = {
       -- Diff and merge
       ["<leader>gl"] = { "<cmd> diffget LOCAL <CR>", "Apply local changes" },
       ["<leader>gr"] = { "<cmd> diffget REMOTE <CR>", "Apply remote changes" },
+      -- Pydocstring
+      ["<leader>ds"] = { "<cmd> Pydocstring <CR>", "Add Pydocstring template" },
    },
    x = {
       ["<leader>e"] = { "%", "Go to matching pair" },

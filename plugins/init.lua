@@ -34,4 +34,5 @@ return {
       end,
    },
    ["tpope/vim-fugitive"] = {},
+   ["heavenshell/vim-pydocstring"] = {},
 }
