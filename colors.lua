@@ -12,6 +12,7 @@ M.sway_inactive = "#3a4a5f"
 M.bg_default = "#1e222a"
 M.bg_default2 = "#252931"
 M.bg_default3 = "#282c34"
+M.lightbg = "#2d3139"
 
 M.grey = "#42464e"
 

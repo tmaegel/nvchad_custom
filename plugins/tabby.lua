@@ -31,8 +31,7 @@ local function tab_label_no_fallback(tabid, active)
 end
 
 local function win_label(winid, top)
-   local icon = top and "" or ""
-   return string.format(" %s %s ", icon, filename.unique(winid))
+   return string.format(" %s ", filename.unique(winid))
 end
 
 local tabline = {
@@ -46,7 +45,7 @@ local tabline = {
       label = function(tabid)
          return {
             tab_label(tabid, true),
-            hl = { fg = hl_tabline_sel.fg, bg = colors.grey, style = "bold" },
+            hl = { fg = hl_tabline_fill.fg, bg = colors.blue, style = "bold" },
          }
       end,
       left_sep = { " ", hl = { fg = hl_tabline_fill.bg, bg = hl_tabline_fill.bg } },
@@ -56,7 +55,7 @@ local tabline = {
       label = function(tabid)
          return {
             tab_label(tabid),
-            hl = { fg = hl_tabline.fg, bg = colors.bg_default3, style = "bold" },
+            hl = { fg = hl_tabline.fg, bg = colors.lightbg, style = "bold" },
          }
       end,
       left_sep = { " ", hl = { fg = hl_tabline_fill.bg, bg = hl_tabline_fill.bg } },
@@ -67,8 +66,8 @@ local tabline = {
          return {
             win_label(winid, true),
             hl = {
-               fg = hl_tabline.fg,
-               bg = colors.grey,
+               fg = hl_tabline_fill.fg,
+               bg = colors.green,
             },
          }
       end,
@@ -79,7 +78,7 @@ local tabline = {
       label = function(winid)
          return {
             win_label(winid),
-            hl = hl_tabline,
+            hl = { fg = hl_tabline.fg, bg = colors.lightbg, style = "bold" },
          }
       end,
       left_sep = { "", hl = { fg = hl_tabline.bg, bg = hl_tabline_fill.bg } },
