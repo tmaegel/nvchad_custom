@@ -4,6 +4,8 @@ return {
    ["nvim-telescope/telescope.nvim"] = {
       -- Disable lazy-loading for telescope
       module = "telescope",
+      -- Pin release branch of telescope
+      branch = "0.1.x",
    },
    ["jose-elias-alvarez/null-ls.nvim"] = {
       after = "nvim-lspconfig",
