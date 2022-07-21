@@ -29,8 +29,6 @@ M.ui = {
 
    tabufline = {
       enabled = false,
-      lazyload = true,
-      override = {},
    },
 
    theme = "onedark", -- default theme
