@@ -54,5 +54,19 @@
             "\t${1:pass}"
         ],
         "description": "else statement"
+    },
+    "pattern-match": {
+        "prefix": "match",
+        "body": [
+            "match status:",
+            "\tcase 400:",
+            "\t\treturn \"Bad request\"",
+            "\tcase 404:",
+            "\t\treturn \"Not found\"",
+            "\tcase 418:",
+            "\t\treturn \"I'm a teapot\"",
+            "\tcase _:",
+            "\t\treturn \"Something's wrong with the Internet\""
+        ]
     }
 }
